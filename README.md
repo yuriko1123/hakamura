@@ -9,7 +9,8 @@ Nodejsでtwitterのお気に入り情報を取得
 * reference
 
 ## 必要条件(Requirements)
-
+Nodejs ver8.11.3
+npm ver5.6.0
 
 ## 使い方(Usage)
 
