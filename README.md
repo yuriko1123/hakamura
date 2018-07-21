@@ -30,6 +30,19 @@ Nodejsでtwitterのお気に入り情報を取得
     ```shell
     npm install
     ```
+1. 新たにファイルapp.jsonを作成する
+
+1. ファイルに下記の通り記述する
+    ```shell
+   {
+      "consumer_key":"取得したconsumer_key",
+      "consumer_secret":"取得したconsumer_secret",
+      "access_token_key":"取得したaccess_token_key",
+      "access_token_secret":"取得したaccess_token_secret"
+   }
+    ```
+
+
 1.  起動(コンソールにtwitterのお気に入り情報を出力)
     ```shell
     npm test
