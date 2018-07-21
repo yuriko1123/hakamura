@@ -1,39 +1,46 @@
 # hakamura
+
 Nodejsでtwitterのお気に入り情報を取得
 
+## 目次(Table of contents)
 
-## 目次(Table of Contents)
-* Requirements
-* Usage
-* License
-* reference
+- [必要条件(Requirements)](#必要条件requirements)
+- [使い方(Usage)](#使い方usage)
+- [ライセンス(License)](#ライセンスlicense)
+- [参考(reference)](#参考reference)
 
 ## 必要条件(Requirements)
-* Nodejs ver8.11.3  
-* npm ver5.6.0
+
+- Nodejs: ver 8.11.3  
+- npm: ver 5.6.0
+
+1. twitterのアプリケーションを登録  
+    1. twitterアカウント作成  
+    1. アプリケーションの作成  
+    1. アクセストークンの取得
 
 ## 使い方(Usage)
-1.twitterのアプリケーションを登録  
-* twitterアカウント作成  
-* アプリケーションの作成  
-* アクセストークンの取得
 
-2.npmでパッケージをインストール  
-* プロジェクト用のフォルダ作成  
-* フォルダ内にpackage.jsonを作成  
-npm init  
-* twitterプラグインをインストール  
-npm --save install twitter
-
-3.コンソールにtwitterのお気に入り情報を出す  
-node ~~~.js
-
-
+1. リポジトリのダウンロード & hakamuraの中に入る
+    ```shell
+    git clone https://github.com/yuriko1123/hakamura
+    cd hakamura
+    ```
+1. 必要パッケージのインストール
+    ```shell
+    npm install
+    ```
+1.  起動(コンソールにtwitterのお気に入り情報を出力)
+    ```shell
+    npm test
+    ```
 
 ## ライセンス(License)
-* MIT License
+
+[MIT License](./LICENSE)
 
 ## 参考(reference)
-* https://www.npmjs.com/package/twitter
-* http://shomi3023.com/2018/01/21/twitter-api-get-tweet/
-* http://d.hatena.ne.jp/mkio/20160125/1453696937
+
+* [npm](https://www.npmjs.com/package/twitter)
+* [shomiの備忘録](http://shomi3023.com/2018/01/21/twitter-api-get-tweet/)
+* [わかりづらい事ばかり](http://d.hatena.ne.jp/mkio/20160125/1453696937)
