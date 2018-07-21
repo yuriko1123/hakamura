@@ -1,13 +1,8 @@
 // twitterモジュールを読み込み
 var twitter = require('twitter');
+var fs = require("fs");
 
-//アプリ登録時に取得したkey
-var client = twitter({
-  consumer_key:'取得したconsumer_key',
-  consumer_secret:'取得したconsumer_secret',
-  access_token_key:'取得したaccess_token_key',
-  access_token_secret:'取得したaccess_token_secret'
-});
+var client = new twitter(JSON.parse(fs.readFileSync("app.json","utf-8")));
 
 // ファボ取得
 client.get('favorites/list', function(error, tweets, response) {
