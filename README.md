@@ -21,7 +21,7 @@ Nodejsでtwitterのお気に入り情報を取得
 
 ## 使い方(Usage)
 
-1. リポジトリのダウンロード & hakamuraの中に入る
+1. リポジトリのダウンロード & hakamuraの中に入る
     ```shell
     git clone https://github.com/yuriko1123/hakamura
     cd hakamura
@@ -31,6 +31,9 @@ Nodejsでtwitterのお気に入り情報を取得
     npm install
     ```
 1. 新たにファイルapp.jsonを作成する
+    ```shell
+    touch app.json
+    ```
 
 1. ファイルに下記の通り記述する
     ```shell
