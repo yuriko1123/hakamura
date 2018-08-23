@@ -1,6 +1,8 @@
 // twitterモジュールを読み込み
 var twitter = require('twitter');
 var fs = require('fs');
+var https = require('https');
+
 
 var client = new twitter(JSON.parse(fs.readFileSync('app.json', 'utf-8')));
 
@@ -12,7 +14,18 @@ client.get('favorites/list', function(error, tweets) {
 
     // urlのみを取得
     var reg = new RegExp('http(s)?://([\\w-]+\.)+[\\w-]+(/[\\w-./?%&=]*)?', 'gi');
-    var mat = favo.match(reg);
-    console.log(mat[0]);
+    var url = favo.match(reg);
+    console.log(url[0]);
+    
+    // リダイレクト先を取得
+    var req = https.get(url, function(url) {
+      console.log('hoge');
+      url.setEncoding('utf8');
+      console.log(url.statusCode);//301とか310
+      var location = url.headers.location;
+      console.log(location);//リダイレクトされる先
+
+    });
+    req.end();
   });
 });
