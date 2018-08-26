@@ -20,8 +20,11 @@ client.get('favorites/list', function(error, tweets) {
     var req = https.get(url[0], function(url) {
       url.setEncoding('utf8');
       console.log(url.statusCode);//301とか310
+
+      return function(location) {
       var location = url.headers.location;
-      console.log(location);//リダイレクトされる先
+      //console.log(location);//リダイレクトされる先
+      }
     });
   });
 });
